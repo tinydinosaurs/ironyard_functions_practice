@@ -271,13 +271,10 @@ console.assert(fibonacciDoubleDigits[0] === 13);
 
 var myWords = ['cat', 'dog', 'bird', 'lizard', 'hippo'];
 
-var myPlurals = myWords.map(function makePlurals(words) {
-    for(var i = 0; i < words.length; i++) {
-        words[i] = words[i] + 's';
-    }
-    return words;
-});
+var myPlurals = myWords.map(function makePlural(word) {
+        word += 's';
+         return word;
+     }
+);
 
-// cannot get map function to actually work for the array on which the method is called.
-// I actually copied and pasted the example from MDN, and it failed the assert, so I don't know....
 console.assert(myPlurals[0] === 'cats');
